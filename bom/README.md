@@ -1,1 +1,6 @@
 # Компоненты для несущей платы
+
+| № | Название папки | Компонент |
+|:-:|:---------------|:----------|
+| 1 | [connectors/comexpress](connectors/comexpress) | [3-1827253-6 (разъём COM Express Type 6, Molex)](connectors/comexpress/3-1827253-6.pdf) |
+
