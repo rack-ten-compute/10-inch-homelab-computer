@@ -77,4 +77,6 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 - **PEG x8 (MCIO)** — линия расширения, на несущей плате не раскрывается
   под отдельные слоты.
 - Механическая спецификация Basic Module (габариты, крепление, разъёмы
-  COM Express несущей платы) — [som-5871-mech-spec.md](som-5871-mech-spec.md).
+  COM Express несущей платы) — [mech/README.md](mech/README.md).
+- Pinout всех 440 пинов разъёма (сигналы модуля SOM-5871 A101-3 + сводка по
+  группам для несущей платы) — [pinout.md](pinout.md).
