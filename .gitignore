@@ -1,2 +1,6 @@
 # Agent rules (Cline)
 .clinerules/
+
+# Local session context (не выкладывать в GitHub)
+CONTEXT.md
+
