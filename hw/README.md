@@ -80,3 +80,5 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
   COM Express несущей платы) — [mech/README.md](mech/README.md).
 - Pinout всех 440 пинов разъёма (сигналы модуля SOM-5871 A101-3 + сводка по
   группам для несущей платы) — [pinout.md](pinout.md).
+- Электрическая спецификация (питание 12V/5V_SBY/RTC, power sequencing,
+  rise time, целостность сигналов) — [elec-spec.md](elec-spec.md).
