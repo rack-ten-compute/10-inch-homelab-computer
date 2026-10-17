@@ -60,3 +60,34 @@ ATX 304,8 × 244 мм, PICMG COM R3.0 Rev. 3.0). Спецификация:
 Ограничения A1 по сравнению с A2/A3: PCIe Gen3 (не Gen4), нет поддержки
 Type 10, нет TPM на плате (TPM 2.0 — опция A1), один Gigabit Ethernet.
 
+### Разводка USB-интерфейсов
+
+По схеме [som-db5830_sch.pdf](som-db5830_sch.pdf) (листы 4–10). Все USB-порты
+модуля выведены на три внешних разъёма:
+
+| № | Интерфейс | Порты модуля (пины COMe) | Промежуточные компоненты | Разъём (парт) | Пины разъёма |
+|:-:|:----------|:-------------------------|:-------------------------|:--------------|:-------------|
+| 1 | USB 3.1 Port 0-1 (SuperSpeed) | `USB_SSTX0/1±` (C3-C10, D3-D10), `USB_SSRX0/1±` | **U44 — PI3EQX1004B1ZHEX** (redriver Gen2), CMC, ESD TPD4E02B04DQAR | **LAN0_USB1A** (RJ45 + USB×2, dual-stacked Type-A) | 14-19 / 214-219 (SS TX/RX ±) |
+| 2 | USB 2.0 Port 0-1 | `USB0/1_P±` (A45-A46, B45-B46) | CMC B1/B2, ESD D1/D2 | **LAN0_USB1A** (тот же) | 11-13 / 210-212 (VBUS, D-, D+) |
+| 3 | USB 3.1 Port 2-3 (SuperSpeed) | `USB_SSTX2/3±` (C9-C13, D9-D13), `USB_SSRX2/3±` | **U45 — PI3EQX1004B1ZHEX** (redriver Gen2), CMC, ESD TPD4E02B04DQAR | **USB3.2_1** (dual-stacked Type-A, «USB3.1x2_9H») | 14-19 / 214-219 (SS TX/RX ±) |
+| 4 | USB 2.0 Port 2-3 | `USB2/3_P±` (A42-A43, B42-B43) | CMC B10/B12, ESD D4/D5 | **USB3.2_1** (тот же) | 11-13 / 210-212 (VBUS, D-, D+) |
+| 5 | USB 2.0 Port 4-7 | `USB4/5/6/7_P±` (A39-A46, B39-B46) | CMC B24-B28, ESD D7/D8, LDO RT9742CGJ5F (U40/U41) | **USB2.0_1** (quad-stacked Type-A, парт 1654009643) | 1-16 (4× VCC/USB-/USB+/GND) |
+
+**VBUS / защита от перегрузки:**
+
+| Разъём | VBUS | OC-сигнал (пин модуля) |
+|:-------|:-----|:-----------------------|
+| LAN0_USB1A (Port 0-1) | +V5_USB3.1_Y_01 (RT9742AGJ5F, U39), +V5_DUAL | `USB_OC#01` (B44) |
+| USB3.2_1 (Port 2-3) | +V5_USB3.2_Z_23 (RT9742AGJ5F, U43), +V5_DUAL | `USB_OC#23` (A44) |
+| USB2.0_1 (Port 4-7) | +V5_USB2.0_Z_45 / +V5_USB2.0_Z_67 (RT9742CGJ5F, U40/U41) | `USB_OC#45` (B38), `USB_OC#67` (A38, через джампер J1) |
+
+> **Примечания:**
+> - схема в PDF — рева A3; для референса SOM-DB5830-00A1 парт-номера
+>   redriver/CMC/коннекторов могут отличаться (см. Revision History),
+>   топология разводки одинакова;
+> - USB 3.1 Port 0-1 физически сидит в RJ45-стеке LAN0 (Gigabit Ethernet
+>   + 2× USB); Port 3 (`USB_SSTX3/3`, C12-C13/D12-D13) модулем не
+>   используется (N/A в [pinout](../../hw/pinout.md));
+> - USB 2.0 Port 0-7 — порты CPU (не через хабы модуля).
+
+
