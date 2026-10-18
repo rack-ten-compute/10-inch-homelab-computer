@@ -72,7 +72,7 @@
 Общее для всех конфигураций:
 
 - 2× SATA III (M.2 2280 Key B + U.2), PCIe x4 под NVMe/U.2 и x1 под M.2 M-Key
-- 2× USB 3.1 Gen2 + 1× USB 3.1 Gen1 (Type-A/Type-E), 4× USB 2.0
+- 2× USB 3.1 Gen2 + 1× USB 3.1 Gen1 (все Type-A, Gen1 — с портом USB 2.0), 4× USB 2.0
 - GbE (Intel I210-AT), dual-channel LVDS (2× FPC-40) + DisplayPort
 - SMBus / I2C / SPI / WDT / FAN / GPIO — сервисные хедеры
 - Питание: Vin 8.5–20 В (+ VSB 4.75–5.25 В в режиме ATX)
@@ -87,7 +87,7 @@
   AMD Ryzen Embedded V1000), крепление — разъём COM Express Type 6
   (Molex [3-1827253-6](bom/connectors/comexpress/3-1827253-6.pdf))
 - **Несущая плата** — кастомная: M.2 2280 Key B, U.2, M.2 M-Key, 2× FPC-40
-  (LVDS), RJ45, USB Type-A/Type-E, HD Audio, сервисные пин-хедеры
+  (LVDS), RJ45, USB Type-A, HD Audio, сервисные пин-хедеры
   (GPIO/SPI/I2C/COM2)
 - **ОЗУ** — 2× DDR4 SO-DIMM (на самом модуле)
 - **Корпус** — 10" (254 мм), крепление в стойку EIA-310
