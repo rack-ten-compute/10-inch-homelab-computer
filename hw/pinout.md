@@ -96,8 +96,8 @@ Pinout Type 6 Rev 3.0, 2 × 220-pin (A/B и C/D), шаг 0,5 мм. Сигнал�
 | A85 | GPI3 | GPIO |
 | A86 | N/A | RSVD |
 | A87 | eDP_HPD(Optional) | RSVD |
-| A88 | PCIE_CLK_REF+ | PCIe |
-| A89 | PCIE_CLK_REF- | PCIe |
+| A88 | PCIE0_CLK_REF+ | PCIe |
+| A89 | PCIE0_CLK_REF- | PCIe |
 | A90 | GND (FIXED) | Питание / GND |
 | A91 | SPI_POWER | SPI |
 | A92 | SPI_MISO | SPI |
@@ -375,8 +375,8 @@ Pinout Type 6 Rev 3.0, 2 × 220-pin (A/B и C/D), шаг 0,5 мм. Сигнал�
 | D19 | PCIE_TX6+ | PCIe |
 | D20 | PCIE_TX6- | PCIe |
 | D21 | GND (FIXED) | Питание / GND |
-| D22 | PCIE_TX7+  (optional) | PCIe |
-| D23 | PCIE_TX7-   (optional) | PCIe |
+| D22 | PCIE_TX7+ | PCIe |
+| D23 | PCIE_TX7- | PCIe |
 | D24 | RSVD | RSVD |
 | D25 | RSVD | RSVD |
 | D26 | DDI1_PAIR0+ | DDI1 (DisplayPort) |
@@ -450,7 +450,7 @@ Pinout Type 6 Rev 3.0, 2 × 220-pin (A/B и C/D), шаг 0,5 мм. Сигнал�
 | D94 | N/A | PCIe |
 | D95 | N/A | PCIe |
 | D96 | GND | Питание / GND |
-| D97 | RSVD | RSVD |
+| D97 | PEG_ENABLE# | PCIe |
 | D98 | N/A | PCIe |
 | D99 | N/A | PCIe |
 | D100 | GND (FIXED) | Питание / GND |
@@ -476,8 +476,8 @@ Pinout Type 6 Rev 3.0, 2 × 220-pin (A/B и C/D), шаг 0,5 мм. Сигнал�
 | SATA 2/3 | A22-A26, B22-B26 — N/A | — | не используются |
 | USB 2.0 (CPU) | USB0/1 (B45-B46, B44), USB2/3 (A42-A44), USB4/5 (A39-A40, B39-B40), USB6/7 (A36-A38, B36-B37) | — | 4 порта CPU → 2 хедера |
 | USB 3.1 | — | SSRX0-2/SSTX0-2 (C3-C13, D3-D13), SSRX3/SSTX3 — N/A | 2× Gen2 + 1× Gen1 |
-| PCIe GPP #0-4 | TX0-4 (A52-A69), RX0-4 (B52-B69), REF CLK (A88-A89) | — | x4 → U.2, x1 → M.2 M-Key; линия #5 (A52-A53/B52-B53) — только ревизии до ECOM-165390 (с PCIe-мостом PEX8605, 6 линий GPP); после ECOM-165390 — 5 линий, см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf) |
-| PCIe PEG #0-7 | — | PEG_TX0-7 / PEG_RX0-7 (C19-C75, D19-D75) + LANE_RV# (D54) | MCIO (x8) |
+| PCIe GPP #0-4 | TX0-4 (A52-A69), RX0-4 (B52-B69), REF CLK PCIE0_CLK_REF± (A88-A89) | — | x4 → U.2, x1 → M.2 M-Key; линия #5 (A52-A53/B52-B53) — только ревизии до ECOM-165390 (с PCIe-мостом PEX8605, 6 линий GPP); после ECOM-165390 — 5 линий, см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf) |
+| PCIe PEG #0-7 | — | PEG_TX0-7 / PEG_RX0-7 (C19-C75, D19-D75) + PEG_LANE_RV# (D54), PEG_ENABLE# (D97) | MCIO (x8) |
 | LVDS (dual ch) | CH-A: A71-A84, CH-B: B71-B83 (+BKLT) | — | 2× FPC-40 |
 | VGA | B89-B96 (DDI0) | — | не поддерживается |
 | DDI1 (DP1) | — | PAIR0-3 (D26-D37), AUX (D15-D16, D32-D34), HPD (C24) | DisplayPort |
@@ -493,3 +493,37 @@ Pinout Type 6 Rev 3.0, 2 × 220-pin (A/B и C/D), шаг 0,5 мм. Сигнал�
 | Питание | VCC_12V (A104-A109, B104-B109, C104-C109, D104-D109), VCC_5V_SBY (B84-B87), VCC_RTC (A47) | — | ATX: Vin + VSB |
 | TPM/MTD | A96 (TPM_PP), A97 (N/C) | C54/C57 (N/C) | TPM 2.0 (опция) |
 | RSVD | разбросаны | разбросаны | no-connect |
+
+## PCIe GPP — детали из Layout Checklist
+
+Источник: вкладка *PCI Express Lanes (PCIE)* из
+[`docs/SOM-5871/design/SOM-5871 A101-3 COME Layout Checklist V1.01 20200604.xlsx`](../docs/SOM-5871/design/SOM-5871%20A101-3%20COME%20Layout%20Checklist%20V1.01%2020200604.xlsx)
+(раздел *General Purpose*, колонка SOM-5871 A101-3). «—» в столбце
+Optional = в xlsx пометки нет.
+
+| Порт | Направление | Контакты (COMe) | Optional | Примечание |
+|:----:|:-----------|:----------------|:--------:|:-----------|
+| GPP #0 | TX | A68 / A69 | — | Gen3, L < 9000 mils |
+| GPP #0 | RX | B68 / B69 | — | Gen3, L < 9000 mils |
+| GPP #1 | TX | A64 / A65 | — | Gen3, L < 9000 mils |
+| GPP #1 | RX | B64 / B65 | — | Gen3, L < 9000 mils |
+| GPP #2 | TX | A61 / A62 | — | Gen3, L < 9000 mils |
+| GPP #2 | RX | B61 / B62 | — | Gen3, L < 9000 mils |
+| GPP #3 | TX | A58 / A59 | — | Gen3, L < 9000 mils |
+| GPP #3 | RX | B58 / B59 | — | Gen3, L < 9000 mils |
+| GPP #4 | TX | A55 / A56 | — | **Gen2 only** (L > 4000 mils) |
+| GPP #4 | RX | B55 / B56 | — | **Gen2 only** (L > 4000 mils) |
+| GPP #5 | TX | A52 / A53 | **да** | Gen3; только ревизии до ECOM-165390 (с мостом PEX8605, 6 линий GPP); пометка Optional — из датасита |
+| GPP #5 | RX | B52 / B53 | **да** | Gen3; после ECOM-165390 — 5 линий, см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf) |
+| GPP #6 | TX | D19 / D20 | — | **Gen2 only**; часть x8-буфера PEG (на A101-3 — GPP) |
+| GPP #6 | RX | C19 / C20 | — | **Gen2 only**; то же |
+| GPP #7 | TX | D22 / D23 | — | **Gen2 only**; то же |
+| GPP #7 | RX | C22 / C23 | — | **Gen2 only**; то же |
+| REF CLK | — | A88 / A89 | — | `PCIE0_CLK_REF±`, 1000 < L < 12000 mils |
+
+> Примечания:
+> - в xlsx **нет** пометки «Optional» у GPP-линий — пометка у линии #5 взята
+>   из датасита (GPP #5 — option);
+> - линии #4–#7 — «PCIe Gen2 only» (из xlsx, L > 4000 mils — до PCIe-моста);
+> - x16-буфер PEG (D54 `PEG_LANE_RV#`, D97 `PEG_ENABLE#`) на A101-3 не
+>   используется как x16 — см. раздел *x16 Graphics* той же вкладки.

@@ -4,3 +4,6 @@
 # Local session context (не выкладывать в GitHub)
 CONTEXT.md
 
+# Office lock files (~$*)
+~$*
+
