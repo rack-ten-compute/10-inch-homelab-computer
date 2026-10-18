@@ -503,23 +503,23 @@ Optional = в xlsx пометки нет.
 
 | Порт | Направление | Контакты (COMe) | Optional | Примечание |
 |:----:|:-----------|:----------------|:--------:|:-----------|
-| GPP #0 | TX | A68 / A69 | — | Gen3, L < 9000 mils |
-| GPP #0 | RX | B68 / B69 | — | Gen3, L < 9000 mils |
-| GPP #1 | TX | A64 / A65 | — | Gen3, L < 9000 mils |
-| GPP #1 | RX | B64 / B65 | — | Gen3, L < 9000 mils |
-| GPP #2 | TX | A61 / A62 | — | Gen3, L < 9000 mils |
-| GPP #2 | RX | B61 / B62 | — | Gen3, L < 9000 mils |
-| GPP #3 | TX | A58 / A59 | — | Gen3, L < 9000 mils |
-| GPP #3 | RX | B58 / B59 | — | Gen3, L < 9000 mils |
+| GPP #0 | TX | A68 / A69 | — | L < 9000 mils |
+| GPP #0 | RX | B68 / B69 | — | L < 9000 mils |
+| GPP #1 | TX | A64 / A65 | — | L < 9000 mils |
+| GPP #1 | RX | B64 / B65 | — | L < 9000 mils |
+| GPP #2 | TX | A61 / A62 | — | L < 9000 mils |
+| GPP #2 | RX | B61 / B62 | — | L < 9000 mils |
+| GPP #3 | TX | A58 / A59 | — | L < 9000 mils |
+| GPP #3 | RX | B58 / B59 | — | L < 9000 mils |
 | GPP #4 | TX | A55 / A56 | — | **Gen2 only** (L > 4000 mils) |
 | GPP #4 | RX | B55 / B56 | — | **Gen2 only** (L > 4000 mils) |
-| GPP #5 | TX | A52 / A53 | **да** | Gen3; пометка `(Optional)` в xlsx; только ревизии до ECOM-165390 (с мостом PEX8605, 6 линий GPP) |
-| GPP #5 | RX | B52 / B53 | **да** | Gen3; пометка `(Optional)` в xlsx; после ECOM-165390 — 5 линий, см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf) |
-| GPP #6 | TX | D19 / D20 | — | **Gen2 only** |
-| GPP #6 | RX | C19 / C20 | — | **Gen2 only** |
-| GPP #7 | TX | D22 / D23 | **да** | **Gen2 only**; пометка `(optional)` в xlsx |
-| GPP #7 | RX | C22 / C23 | **да** | **Gen2 only**; пометка `(optional)` в xlsx |
-| REF CLK | — | A88 / A89 | — | `PCIE_CLK_REF±`, 1000 < L < 12000 mils |
+| GPP #5 | TX | A52 / A53 | **да** | L < 9000 mils; пометка `(Optional)` в xlsx |
+| GPP #5 | RX | B52 / B53 | **да** | L < 9000 mils; пометка `(Optional)` в xlsx |
+| GPP #6 | TX | D19 / D20 | — | **Gen2 only** (L > 4000 mils) |
+| GPP #6 | RX | C19 / C20 | — | **Gen2 only** (L > 4000 mils) |
+| GPP #7 | TX | D22 / D23 | **да** | **Gen2 only** (L > 4000 mils); пометка `(optional)` в xlsx |
+| GPP #7 | RX | C22 / C23 | **да** | **Gen2 only** (L > 4000 mils); пометка `(optional)` в xlsx |
+| REF CLK | — | A88 / A89 | — | 1000 < L < 12000 mils |
 
 > Примечания:
 > - пометки `(Optional)` / `(optional)` — из колонки *SOM-5871 A101-3* вкладок *Row A/B/C/D*;
