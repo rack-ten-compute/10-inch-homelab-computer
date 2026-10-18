@@ -513,17 +513,16 @@ Optional = в xlsx пометки нет.
 | GPP #3 | RX | B58 / B59 | — | Gen3, L < 9000 mils |
 | GPP #4 | TX | A55 / A56 | — | **Gen2 only** (L > 4000 mils) |
 | GPP #4 | RX | B55 / B56 | — | **Gen2 only** (L > 4000 mils) |
-| GPP #5 | TX | A52 / A53 | **да** | Gen3; только ревизии до ECOM-165390 (с мостом PEX8605, 6 линий GPP); пометка Optional — из датасита |
-| GPP #5 | RX | B52 / B53 | **да** | Gen3; после ECOM-165390 — 5 линий, см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf) |
+| GPP #5 | TX | A52 / A53 | **да** | Gen3; пометка `(Optional)` в xlsx; только ревизии до ECOM-165390 (с мостом PEX8605, 6 линий GPP) |
+| GPP #5 | RX | B52 / B53 | **да** | Gen3; пометка `(Optional)` в xlsx; после ECOM-165390 — 5 линий, см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf) |
 | GPP #6 | TX | D19 / D20 | — | **Gen2 only**; часть x8-буфера PEG (на A101-3 — GPP) |
 | GPP #6 | RX | C19 / C20 | — | **Gen2 only**; то же |
-| GPP #7 | TX | D22 / D23 | — | **Gen2 only**; то же |
-| GPP #7 | RX | C22 / C23 | — | **Gen2 only**; то же |
-| REF CLK | — | A88 / A89 | — | `PCIE0_CLK_REF±`, 1000 < L < 12000 mils |
+| GPP #7 | TX | D22 / D23 | **да** | **Gen2 only**; пометка `(optional)` в xlsx; часть x8-буфера PEG |
+| GPP #7 | RX | C22 / C23 | **да** | **Gen2 only**; пометка `(optional)` в xlsx; то же |
+| REF CLK | — | A88 / A89 | — | `PCIE_CLK_REF±`, 1000 < L < 12000 mils |
 
 > Примечания:
-> - в xlsx **нет** пометки «Optional» у GPP-линий — пометка у линии #5 взята
->   из датасита (GPP #5 — option);
-> - линии #4–#7 — «PCIe Gen2 only» (из xlsx, L > 4000 mils — до PCIe-моста);
+> - пометки `(Optional)` / `(optional)` — из колонки *SOM-5871 A101-3* вкладок *Row A/B/C/D*;
+> - линии #4–#7 — «PCIe Gen2 only» (из вкладки *PCI Express Lanes*, L > 4000 mils — до PCIe-моста);
 > - x16-буфер PEG (D54 `PEG_LANE_RV#`, D97 `PEG_ENABLE#`) на A101-3 не
 >   используется как x16 — см. раздел *x16 Graphics* той же вкладки.
