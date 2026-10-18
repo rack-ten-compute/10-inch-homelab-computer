@@ -1,6 +1,8 @@
 ## Advantech SOM-5871VC-U0A1
 
 **COM Express Basic Type 6** — вычислительный модуль на базе AMD Ryzen Embedded V1605B.
+Официальная страница серии (все артикулы SOM-5871):
+[SOM-5871 — Advantech](https://www.advantech.com/emt/products/9b97accf-0a5b-4166-bf75-38159d579dec/som-5871/mod_3417358f-efd6-4ff9-bef6-76e3ce54c674).
 
 | Параметр                | Характеристика                               |
 | ----------------------- | -------------------------------------------- |
@@ -25,13 +27,30 @@
 | **Габариты**            | 125 × 95 мм                                  |
 | **Интерфейс подключения**         | COM Express Basic Type 6                     |
 
+## Документация по модулю
+
+- **Спецификация (датасит)** — [SOM_5871_specification.pdf](datasheet/SOM_5871_specification.pdf)
+- **COM Express Type 6 Design Guide Rev 1.10** —
+  [design/SOM-5871 COM Express Type 6 Design Guide Rev110_220708.pdf](design/SOM-5871%20COM%20Express%20Type%206%20Design%20Guide%20Rev110_220708.pdf)
+- **COME Layout Checklist A101-3** —
+  [design/SOM-5871 A101-3 COME Layout Checklist V1.01 20200604.xlsx](design/SOM-5871%20A101-3%20COME%20Layout%20Checklist%20V1.01%2020200604.xlsx)
+- **User Manual** — [user-manual/SOM-5871_User_Manual_Ed.2_FINAL.pdf](user-manual/SOM-5871_User_Manual_Ed.2_FINAL.pdf)
+  (Ed.1: [user-manual/SOM-5871_User_Manual_Ed.1-FINAL.pdf](user-manual/SOM-5871_User_Manual_Ed.1-FINAL.pdf))
+- **Application Note** — [user-manual/SOM-5871 Application Note20190226.pdf](user-manual/SOM-5871%20Application%20Note20190226.pdf)
+- **Драйверы Windows 10** — [win10-driver/cloud-mail-link.md](win10-driver/cloud-mail-link.md)
+  (ссылки на архив с cloud.mail.ru и страницу драйверов Advantech)
+- **3D-модели / CAD** — [3d/](3d) (STEP, PDF, EXE, DXF)
+- **Product Change Notification** —
+  [product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf](product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf)
+  (EOL: PCIe-мост SOM-5871)
+
 ## Отладка / референсная плата — SOM-DB5830-00A1
 
 Отладка SOM-5871 выполняется на отладочной плате
 **Advantech SOM-DB5830-00A1** (COM Express Type 6/10 development board,
 ATX 304,8 × 244 мм, PICMG COM R3.0 Rev. 3.0). Спецификация:
-[SOM-DB5830_specification.pdf](SOM-DB5830_specification.pdf),
-схема: [som-db5830_sch.pdf](som-db5830_sch.pdf).
+[som-db5830/SOM-DB5830_specification.pdf](som-db5830/SOM-DB5830_specification.pdf),
+схема: [som-db5830/som-db5830_sch.pdf](som-db5830/som-db5830_sch.pdf).
 
 | Параметр | Характеристика (A1) |
 | --- | --- |
@@ -62,7 +81,7 @@ Type 10, нет TPM на плате (TPM 2.0 — опция A1), один Gigabi
 
 ### Разводка USB-интерфейсов
 
-По схеме [som-db5830_sch.pdf](som-db5830_sch.pdf) (листы 4–10). Все USB-порты
+По схеме [som-db5830/som-db5830_sch.pdf](som-db5830/som-db5830_sch.pdf) (листы 4–10). Все USB-порты
 модуля выведены на три внешних разъёма:
 
 | № | Интерфейс | Порты модуля (пины COMe) | Промежуточные компоненты | Разъём (парт) | Пины разъёма |

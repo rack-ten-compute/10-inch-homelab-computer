@@ -1,6 +1,6 @@
 # SOM-5871 — Pinout разъёма COM Express (Basic Module, 440 pin)
 
-Источник: вкладки `Row A`/`Row B`/`Row C`/`Row D` (колонка *SOM-5871 A101-3*) из [`docs/SOM-5871/SOM-5871 A101-3 COME Layout Checklist V1.01 20200604.xlsx`](../docs/SOM-5871/SOM-5871%20A101-3%20COME%20Layout%20Checklist%20V1.01%2020200604.xlsx).
+Источник: вкладки `Row A`/`Row B`/`Row C`/`Row D` (колонка *SOM-5871 A101-3*) из [`docs/SOM-5871/design/SOM-5871 A101-3 COME Layout Checklist V1.01 20200604.xlsx`](../docs/SOM-5871/design/SOM-5871%20A101-3%20COME%20Layout%20Checklist%20V1.01%2020200604.xlsx).
 
 Pinout Type 6 Rev 3.0, 2 × 220-pin (A/B и C/D), шаг 0,5 мм. Сигналы в колонке модуля; **N/A / RSVD** — не используются модулем.
 

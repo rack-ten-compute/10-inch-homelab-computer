@@ -2,10 +2,10 @@
 
 Источники:
 - раздел **4 Electrical Characteristics** (Table 63–65) из
-  [`docs/SOM-5871/SOM-5871 COM Express Type 6 Design Guide Rev110_220708.pdf`](../docs/SOM-5871/SOM-5871%20COM%20Express%20Type%206%20Design%20Guide%20Rev110_220708.pdf)
+  [`docs/SOM-5871/design/SOM-5871 COM Express Type 6 Design Guide Rev110_220708.pdf`](../docs/SOM-5871/design/SOM-5871%20COM%20Express%20Type%206%20Design%20Guide%20Rev110_220708.pdf)
   — специфичен для SOM-5871;
 - вкладка *Electrical Specifications* из
-  [`docs/SOM-5871/SOM-5871 A101-3 COME Layout Checklist V1.01 20200604.xlsx`](../docs/SOM-5871/SOM-5871%20A101-3%20COME%20Layout%20Checklist%20V1.01%2020200604.xlsx)
+  [`docs/SOM-5871/design/SOM-5871 A101-3 COME Layout Checklist V1.01 20200604.xlsx`](../docs/SOM-5871/design/SOM-5871%20A101-3%20COME%20Layout%20Checklist%20V1.01%2020200604.xlsx)
   — общие требования COM Express Type 6 (440-pin): токи пинов,
   последовательность включения, время нарастания, целостность сигналов.
 

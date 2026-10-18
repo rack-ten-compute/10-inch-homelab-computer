@@ -1,7 +1,7 @@
 # SOM-5871 — Механическая спецификация (Basic Module)
 
 Источник: вкладка *Mechanical Specifications* из
-[`docs/SOM-5871/SOM-5871 A101-3 COME Layout Checklist V1.01 20200604.xlsx`](../docs/SOM-5871/SOM-5871%20A101-3%20COME%20Layout%20Checklist%20V1.01%2020200604.xlsx).
+[`docs/SOM-5871/design/SOM-5871 A101-3 COME Layout Checklist V1.01 20200604.xlsx`](../docs/SOM-5871/design/SOM-5871%20A101-3%20COME%20Layout%20Checklist%20V1.01%2020200604.xlsx).
 
 Перенесена только информация, относящаяся к **Basic Module** (125 × 95 мм) и
 **несущей плате** (carrier board): габариты, крепление, разъёмы COM Express.

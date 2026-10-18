@@ -111,6 +111,15 @@
 
 ---
 
+## Документация
+
+- [docs/README.md](docs/README.md) — общая папка с доками;
+  [docs/SOM-5871/README.md](docs/SOM-5871/README.md) — даташиты, user manual,
+  application note, драйверы Windows 10, 3D-модели SOM-5871 + референсная плата
+  SOM-DB5830 (схема, спецификация, разводка USB)
+
+---
+
 ## 📄 Лицензия
 
 Проект распространяется под лицензией MIT. Подробнее в файле [LICENSE](./LICENSE).
