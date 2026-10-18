@@ -476,7 +476,7 @@ Pinout Type 6 Rev 3.0, 2 × 220-pin (A/B и C/D), шаг 0,5 мм. Сигнал�
 | SATA 2/3 | A22-A26, B22-B26 — N/A | — | не используются |
 | USB 2.0 (CPU) | USB0/1 (B45-B46, B44), USB2/3 (A42-A44), USB4/5 (A39-A40, B39-B40), USB6/7 (A36-A38, B36-B37) | — | 4 порта CPU → 2 хедера |
 | USB 3.1 | — | SSRX0-2/SSTX0-2 (C3-C13, D3-D13), SSRX3/SSTX3 — N/A | 2× Gen2 + 1× Gen1 |
-| PCIe GPP #0-4 | TX0-4 (A52-A69), RX0-4 (B52-B69), REF CLK (A88-A89) | — | x4 → U.2, x1 → M.2 M-Key |
+| PCIe GPP #0-4 | TX0-4 (A52-A69), RX0-4 (B52-B69), REF CLK (A88-A89) | — | x4 → U.2, x1 → M.2 M-Key; линия #5 (A52-A53/B52-B53) — опц. (до ECOM-165390 — стандартные 6 линий GPP, см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf)) |
 | PCIe PEG #0-7 | — | PEG_TX0-7 / PEG_RX0-7 (C19-C75, D19-D75) + LANE_RV# (D54) | MCIO (x8) |
 | LVDS (dual ch) | CH-A: A71-A84, CH-B: B71-B83 (+BKLT) | — | 2× FPC-40 |
 | VGA | B89-B96 (DDI0) | — | не поддерживается |

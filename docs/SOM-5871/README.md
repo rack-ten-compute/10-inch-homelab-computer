@@ -15,7 +15,7 @@
 | **Ethernet**            | Intel i210AT, 10/100/1000 Мбит/с             |
 | **SATA**                | 2× SATA III (6 Гбит/с)                       |
 | **USB**                 | 2× USB 3.1 Gen2, 1× USB 3.1 Gen1, 8× USB 2.0 |
-| **PCIe**                | 16 лэйнов PCIe Gen3                                 |
+| **PCIe**                | 1× PEG x8 + GPP: 5 линий (4 x1, опц. x5) |
 | **COM**                 | 2× COM                                       |
 | **GPIO**                | 8-bit                                        |
 | **CAN**                 | Опционально                                  |
@@ -40,9 +40,12 @@
 - **Драйверы Windows 10** — [win10-driver/cloud-mail-link.md](win10-driver/cloud-mail-link.md)
   (ссылки на архив с cloud.mail.ru и страницу драйверов Advantech)
 - **3D-модели / CAD** — [3d/](3d) (STEP, PDF, EXE, DXF)
-- **Product Change Notification** —
-  [product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf](product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf)
-  (EOL: PCIe-мост SOM-5871)
+- **Product Change Notification (ECOM-165390)** —
+  [product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf](product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf):
+  PCIe-мост PLX PEX8605-AB50TQI снят с производства без замены — все x1-линии
+  GPP теперь подключены напрямую от chipset. До: I210 + 6 линий GPP (до 6
+  устройств); после: I210 + **5 линий GPP (до 4 устройств)**. Требуется новая
+  BIOS (1420050267, 0060V111).
 
 ## Отладка / референсная плата — SOM-DB5830-00A1
 
