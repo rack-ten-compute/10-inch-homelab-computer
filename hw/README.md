@@ -20,7 +20,7 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 | ОЗУ | 2× DDR4 SO-DIMM, до 32 ГБ, ECC / Non-ECC, до 2400 МТ/с |
 | Графика | Vega (до 11 CU), H.265 decode/encode, VP9 decode |
 | Дисплеи | VGA, dual-channel LVDS (до 1920×1200), 2–3× DisplayPort 1.4 / HDMI 1.4 / DVI (4 независимых дисплея) |
-| PCIe | 1× PEG x8 (C/D), GPP: 5 линий (до 4 устройств, опц. 6) (A/B) — см. ECOM-165390 |
+| PCIe | 1× PEG x8 (C/D) + GPP (A/B): **6 линий (до 6 устройств)** — ревизии до ECOM-165390 (с PCIe-мостом PLX PEX8605); **5 линий (до 4 устройств)** — после ECOM-165390 (линии напрямую от chipset). Какой вариант — по ревизии модуля |
 | SATA | 2× SATA III (6 Гбит/с) |
 | USB | 2× USB 3.1 Gen2, 1× USB 3.1 Gen1, 8× USB 2.0 (4 от CPU + 4 от хаба) |
 | Ethernet | Intel I210-AT, 10/100/1000 Мбит/с |
@@ -46,7 +46,7 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 | 4 | USB 2.0 (CPU) | 4 | 2× USB 3.1 Type-A (по 2 порта, объединённые с SuperSpeed) + 2× стандартных пин-хедера (как на материнских платах) |
 | 5 | USB 2.0 (хабы на модуле) | 4 | — (хабы не поддерживаются; их порты не выводятся) |
 | 6 | SATA III | 2 | 1× M.2 Key B 2280 + 1× U.2 (общий разъём) |
-| 7 | PCIe GPP (Connector A/B) | 5 линий (до 4 устройств; до ECOM-165390 — 6) | x4 → U.2 (общий, NVMe или модуль дисков) + x1 → M.2 M-Key |
+| 7 | PCIe GPP (Connector A/B) | 6 линий (до 6 устройств) — ревизии до ECOM-165390; 5 линий (до 4 устройств) — после (см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf)) | x4 → U.2 (общий, NVMe или модуль дисков) + x1 → M.2 M-Key (достаточно и для 5-линейного варианта) |
 | 8 | GbE (I210-AT) | 1 | 1× RJ45 |
 | 9 | SPI | 1 | общий пин-хедер GPIO |
 | 10 | SMBus | 1 | Molex 4-pin |
