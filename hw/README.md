@@ -91,3 +91,5 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
   группам для несущей платы) — [pinout.md](pinout.md).
 - Электрическая спецификация (питание 12V/5V_SBY/RTC, power sequencing,
   rise time, целостность сигналов) — [elec/README.md](elec/README.md).
+- Подключение HDMI к DDIx (пин-аут Table 13, разводка TMDS Table 20,
+  level shifters, ESD) — [ddi-hdmi-guide.md](ddi-hdmi-guide.md).
