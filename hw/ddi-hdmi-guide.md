@@ -106,3 +106,15 @@ HDMI-порт подвержен ESD (подключение кабеля, ко�
 
 Размещение: ESD-компоненты — как можно ближе к HDMI-разъёму, footprint **без
 стубов и не более 750 mil (19,05 мм)** от разъёма.
+
+## 4. Пример подключения HDMI к DDI
+
+![Подключение HDMI к DDI из SB-COMEX](hdmi/ddi-hdmi-sch.jpg)
+
+Пример из
+[`docs/SOM-5871/competitor-boards/sb-comex_schematics_1V0.pdf`](../docs/SOM-5871/competitor-boards/sb-comex_schematics_1V0.pdf)
+(стр. 11 — лист *HDMI 1 / HDMI 2 - DNP*).
+
+На стр. 11 `AUX_SEL` для выбора HDMI устанавливается вручную в 1 через
+логическую схему (вместо подтяжки 100 кОм, описанной в §1).
+
