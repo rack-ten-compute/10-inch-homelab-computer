@@ -109,7 +109,7 @@ HDMI-порт подвержен ESD (подключение кабеля, ко�
 
 ## 4. Пример подключения HDMI к DDI
 
-![Подключение HDMI к DDI из SB-COMEX](hdmi/ddi-hdmi-sch.jpg)
+![Подключение HDMI к DDI из SB-COMEX](hdmi/ddi-hdmi-sch.png)
 
 Пример из
 [`docs/SOM-5871/competitor-boards/sb-comex_schematics_1V0.pdf`](../docs/SOM-5871/competitor-boards/sb-comex_schematics_1V0.pdf)
