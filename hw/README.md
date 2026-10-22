@@ -9,6 +9,8 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 управление (WDT, FAN, RST, GPIO) — все управляющие линии сведены в один общий
 (backshell) пин-хедер.
 
+![SOM-5871 Connection Block Diagram](carrier-board-block-diagram.svg)
+
 ## Технические характеристики модуля SOM-5871 (база — SOM-5871VC-U0A1)
 
 | Параметр | Характеристика |
