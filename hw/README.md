@@ -48,7 +48,11 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 | 4 | USB 2.0 (CPU) | 4 | 2× USB 3.1 Type-A (по 2 порта, объединённые с SuperSpeed) + 2× стандартных пин-хедера (как на материнских платах) |
 | 5 | USB 2.0 (хабы на модуле) | 4 | — (хабы не поддерживаются; их порты не выводятся) |
 | 6 | SATA III | 2 | 2× SATA (угловые) + 2× Molex 4-pin — питание (для подключения двух внешних дисков SATA) |
-| 7 | PCIe GPP (Connector A/B) | 6 линий (до 6 устройств) — ревизии до ECOM-165390; 5 линий (до 4 устройств) — после (см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf)) | x4 (Gen3 Port 0–3) → M.2 NVMe + x1 (Gen2 Port 4) → M.2 M-Key (достаточно и для 5-линейного варианта) |
+| 7 | PCIe GPP (Connector A/B) | 6 линий (до 6 устройств) — ревизии до ECOM-165390; 5 линий (до 4 устройств) — после (см. [ECOM-165390](../docs/SOM-5871/product-change/Advantech_Corporation_13256_ECOM_165390__SOM_5871_PCIe_Bridge_EOL_v1.0_20200810_1.pdf)) | 4× M.2 (см. ниже): |
+| 7.1 | M.2 M-Key (NVMe) | Gen3 x4 (Port 0–3) | 1× M.2 M-Key (NVMe) |
+| 7.2 | M.2 M-Key (NVMe) | Gen2 x1 (Port 4) | 1× M.2 M-Key (NVMe) |
+| 7.3 | M.2 M-Key (NVMe) | Gen2 x1 (Port 6) | 1× M.2 M-Key (NVMe) |
+| 7.4 | M.2 E-Key (NVMe) | Gen3 x1 (Port 5) | 1× M.2 E-Key (NVMe) |
 | 8 | GbE (I210-AT) | 1 | 1× RJ45 |
 | 9 | SPI | 1 | общий пин-хедер GPIO |
 | 10 | SMBus | 1 | Molex 4-pin |
