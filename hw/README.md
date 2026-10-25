@@ -21,7 +21,7 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 | TDP | 12–25 Вт (настройка 15 Вт по умолчанию) |
 | ОЗУ | 2× DDR4 SO-DIMM, до 32 ГБ, ECC / Non-ECC, до 2400 МТ/с |
 | Графика | Vega (до 11 CU), H.265 decode/encode, VP9 decode |
-| Дисплеи | dual-channel LVDS (до 1920×1200), 1× DisplayPort (DP1) |
+| Дисплеи | dual-channel LVDS (до 1920×1200), 2× HDMI (HDMI port 1 / HDMI port 2) |
 | PCIe | 1× PEG x8 (C/D) + GPP (A/B): **6 линий (до 6 устройств)** — ревизии до ECOM-165390 (с PCIe-мостом PLX PEX8605); **5 линий (до 4 устройств)** — после ECOM-165390 (линии напрямую от chipset). Какой вариант — по ревизии модуля |
 | SATA | 2× SATA III (6 Гбит/с) |
 | USB | 2× USB 3.1 Gen2, 1× USB 3.1 Gen1, 8× USB 2.0 (4 от CPU + 4 от хаба) |
@@ -52,7 +52,7 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 | 7.1 | M.2 M-Key (NVMe) | Gen3 x4 (Port 0–3) | 1× M.2 M-Key (NVMe) |
 | 7.2 | M.2 M-Key (NVMe) | Gen2 x1 (Port 4) | 1× M.2 M-Key (NVMe) |
 | 7.3 | M.2 M-Key (NVMe) | Gen2 x1 (Port 6) | 1× M.2 M-Key (NVMe) |
-| 7.4 | M.2 M-Key (NVMe) | Gen3 x1 (Port 5) | 1× M.2 M-Key (NVMe) |
+| 7.4 | M.2 E-Key (NVMe) | Gen3 x1 (Port 5) | 1× M.2 E-Key (NVMe) |
 | 8 | GbE (I210-AT) | 1 | 1× RJ45 |
 | 9 | SPI | 1 | общий пин-хедер GPIO |
 | 10 | SMBus | 1 | Molex 4-pin |
@@ -65,8 +65,8 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 | № | Интерфейс | Кол-во на модуле | Кол-во на несущей плате |
 |:-:|:----------|:-:|:------------------------|
 | 14 | PEG #0–7 (PCIe x8) | 8 линий | 1× MCIO |
-| 15 | DP1 | 1 | 1× DisplayPort |
-| 16 | DP2 | 1 | — (не поддерживается) |
+| 15 | DP1 | 1 | 1× HDMI (HDMI port 1) |
+| 16 | DP2 | 1 | 1× HDMI (HDMI port 2) |
 | 17 | DP3 | 1 | — (не поддерживается) |
 | 18 | USB 3.1 (2× Gen2 + 1× Gen1) | 3 | 3× Type-A (2× угловые, вертикальные; 1× Gen1 — с портом USB 2.0, stacked-разъём по аналогии с USB3.2_1 на SOM-DB5830) |
 
@@ -81,10 +81,10 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
   3× Type-A + 2× пин-хедера — подробная конфигурация в
   [usb2-usb3-config.md](usb2-usb3-config.md).
 
-- **Дисплеи**: на несущей плате — dual-channel LVDS (2× FPC-40) и 1×
-  DisplayPort (DP1). VGA, DP2, DP3 не выводятся (на модуле линии
-  присутствуют); освобождаемые линии могут быть задействованы под
-  дополнительные интерфейсы (не запланировано).
+- **Дисплеи**: на несущей плате — dual-channel LVDS (2× FPC-40) и 2× HDMI
+  (HDMI port 1 / HDMI port 2, реализация по ddi-hdmi-guide.md). VGA и DP3 не
+  выведены; освобождаемые линии могут быть задействованы под дополнительные
+  интерфейсы (не запланировано).
 - **PEG x8 (MCIO)** — линия расширения, на несущей плате не раскрывается
   под отдельные слоты.
 - Механическая спецификация Basic Module (габариты, крепление, разъёмы
