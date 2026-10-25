@@ -85,14 +85,14 @@
 
 - **Вычислительный модуль** — Advantech SOM-5871 (COM Express Basic Type 6,
   AMD Ryzen Embedded V1000), крепление — разъём COM Express Type 6
-  (Molex [3-1827253-6](bom/connectors/comexpress/3-1827253-6.pdf))
+  (Molex [3-1827253-6](hw/bom/connectors/comexpress/3-1827253-6.pdf))
 - **Несущая плата** — кастомная: M.2 2280 Key B, U.2, M.2 M-Key, 2× FPC-40
   (LVDS), RJ45, USB Type-A, HD Audio, сервисные пин-хедеры
   (GPIO/SPI/I2C/COM2)
 - **ОЗУ** — 2× DDR4 SO-DIMM (на самом модуле)
 - **Корпус** — 10" (254 мм), крепление в стойку EIA-310
 - **Передняя панель** — опционально: порты USB, кнопка питания, LED-индикация
-- **BOM** — каталог компонентов несущей платы: [bom/README.md](bom/README.md)
+- **BOM** — каталог компонентов несущей платы: [hw/bom/README.md](hw/bom/README.md)
 
 ---
 

@@ -93,6 +93,7 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
   rise time, целостность сигналов) — [elec/README.md](elec/README.md).
 - Подключение HDMI к DDIx (пин-аут Table 13, разводка TMDS Table 20,
   level shifters, ESD) — [ddi-hdmi-guide.md](ddi-hdmi-guide.md).
+- BOM-каталог компонентов несущей платы (PDF-доки) — [bom/README.md](bom/README.md).
 
 ## Подключение HDMI
 
