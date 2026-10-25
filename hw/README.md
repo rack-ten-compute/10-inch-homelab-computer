@@ -21,7 +21,7 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 | TDP | 12–25 Вт (настройка 15 Вт по умолчанию) |
 | ОЗУ | 2× DDR4 SO-DIMM, до 32 ГБ, ECC / Non-ECC, до 2400 МТ/с |
 | Графика | Vega (до 11 CU), H.265 decode/encode, VP9 decode |
-| Дисплеи | VGA, dual-channel LVDS (до 1920×1200), 2–3× DisplayPort 1.4 / HDMI 1.4 / DVI (4 независимых дисплея) |
+| Дисплеи | dual-channel LVDS (до 1920×1200), 1× DisplayPort (DP1) |
 | PCIe | 1× PEG x8 (C/D) + GPP (A/B): **6 линий (до 6 устройств)** — ревизии до ECOM-165390 (с PCIe-мостом PLX PEX8605); **5 линий (до 4 устройств)** — после ECOM-165390 (линии напрямую от chipset). Какой вариант — по ревизии модуля |
 | SATA | 2× SATA III (6 Гбит/с) |
 | USB | 2× USB 3.1 Gen2, 1× USB 3.1 Gen1, 8× USB 2.0 (4 от CPU + 4 от хаба) |
@@ -52,7 +52,7 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
 | 7.1 | M.2 M-Key (NVMe) | Gen3 x4 (Port 0–3) | 1× M.2 M-Key (NVMe) |
 | 7.2 | M.2 M-Key (NVMe) | Gen2 x1 (Port 4) | 1× M.2 M-Key (NVMe) |
 | 7.3 | M.2 M-Key (NVMe) | Gen2 x1 (Port 6) | 1× M.2 M-Key (NVMe) |
-| 7.4 | M.2 E-Key (NVMe) | Gen3 x1 (Port 5) | 1× M.2 E-Key (NVMe) |
+| 7.4 | M.2 M-Key (NVMe) | Gen3 x1 (Port 5) | 1× M.2 M-Key (NVMe) |
 | 8 | GbE (I210-AT) | 1 | 1× RJ45 |
 | 9 | SPI | 1 | общий пин-хедер GPIO |
 | 10 | SMBus | 1 | Molex 4-pin |
@@ -81,6 +81,9 @@ Type 6) на базе AMD Ryzen Embedded V1000. Планируется подд�
   3× Type-A + 2× пин-хедера — подробная конфигурация в
   [usb2-usb3-config.md](usb2-usb3-config.md).
 
+- **Дисплеи**: на несущей плате — dual-channel LVDS (2× FPC-40) и 1×
+  DisplayPort (DP1). VGA, DP2, DP3 на несущей плате не выведены (на модуле
+  линии присутствуют).
 - **DP2/DP3 и VGA** не поддерживаются — освобождаемые линии могут быть
   задействованы под дополнительные интерфейсы (не запланировано).
 - **PEG x8 (MCIO)** — линия расширения, на несущей плате не раскрывается
